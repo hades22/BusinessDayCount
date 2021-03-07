@@ -1,1 +1,6 @@
 # BusinessDayCount
+1. Class BusinessDayCounter contains 4 public methods including WeekdaysBetweenTwoDates, BusinessDaysBetweenTwoDates with public holiday list, BusinessDaysBetweenTwoDates with
+   public holiday rules and BusinessDaysBetweenTwoDatesAustralia for Australia holidays.
+3. BusinessDaysBetweenTwoDates with public holiday rules takes a list of delegates as the public holiday rules. The delegate takes a DateTime value and returns a boolean value        indicating if the date meets the holiday rule. Consumers can customise the holiday rules by passing the delegates.
+4. BusinessDaysBetweenTwoDatesAustralia takes no extra parameters, instead using the embedded pre-defined AU public holiday rules for calculation.
+6. There is a unit test project NUnitTestBusinessDayCount. Unit tests are available in it. The tests cover WeekdaysBetweenTwoDates, BusinessDaysBetweenTwoDates with public holiday    list and BusinessDaysBetweenTwoDates with public holiday rules. Tests for BusinessDaysBetweenTwoDates with public holiday list use a list of public holidays that contains only    Xmas and New Year holidays in 2013 Xmas and 2014 New Year. Tests for BusinessDaysBetweenTwoDates with public holiday rules cover all the Australia public holidays including the    cases when holiday falls on Weekends and an additional day applies.
